@@ -1,0 +1,9 @@
+- hosts: test-servers
+  sudo: yes
+  tasks:
+  - name: ensure keystone database user is present
+    mysql_db:
+      login_host: '10.0.0.83'
+      login_user: root
+      login_password: ringo
+      name: keystone
