@@ -1,0 +1,8 @@
+- hosts: test-servers
+  sudo: yes
+  tasks:
+    - name: be sure apache is installed
+      apt: name=apache2 state=installed
+
+    - name: be sure apache is running and enabled
+      service: name=apache2 state=running enabled=yes
